@@ -1,0 +1,72 @@
+.Logo {
+  border-radius: 75%;
+  border: 1px solid rgba(136, 126, 126, 0.11);
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+  z-index: 10;
+  background: url("/background.png");
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+
+  text-decoration: none;
+}
+.navigation li {
+  padding: 1em;
+}
+.navigation a {
+  text-decoration: none;
+  color: white;
+}
+.Menu {
+  z-index: 9;
+  position: relative;
+  background-color: black;
+  color: white;
+  animation: fadeIn 2s;
+}
+
+.Active {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .Logo {
+    width: 6em;
+    height: 6em;
+  }
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation {
+    display: flex;
+  }
+  .Menu {
+    display: flex;
+    justify-content: center;
+    animation: none;
+  }
+  .icon {
+    display: none;
+  }
+}
